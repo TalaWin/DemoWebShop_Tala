@@ -13,19 +13,19 @@ public class DemoWebShopLocatorsHomework {
     WebDriver driver;
 
     @BeforeMethod
-    public void setUp(){
+    public void setUp() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://demowebshop.tricentis.com/");
     }
 
     @AfterMethod
-    public void tearDown(){
+    public void tearDown() {
         driver.quit();
     }
 
     @Test
-    public void LocatorsAndCssSelectorsTest(){
+    public void LocatorsAndCssSelectorsTest() {
 
         WebElement byId = driver.findElement(By.id("small-searchterms"));
 
@@ -71,12 +71,6 @@ public class DemoWebShopLocatorsHomework {
 
         //by tag, class and an attribute
         driver.findElement(By.cssSelector("input.button-1.newsletter-subscribe-button[value='Subscribe']"));
-
-
-
-
-
-
     }
 
 }
